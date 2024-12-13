@@ -1,3 +1,86 @@
 How to print out special characters (applies when typing text in a <button></button>):
     {'special_character'}, ex) {'('} or {'<'} 
     {''}
+
+How to add a component that for a button:
+    function customButtonName(){
+        return(
+            <button>
+                lorem ipsum 
+            </button>
+        );
+    }
+
+    you call it by doing:
+    <customButtonName />
+
+How to add an img object with attributes:
+
+    i guess each attribute can have it's own custom name
+
+    const custom_object_name = {
+        name: 'example name',
+        imageURL: 'https://example.png',
+        imageSize: 90,
+    };
+
+    this is how you call it in the main area:
+    <div>
+        <h1>{custom_object_name.name}</h1>
+        <img 
+            className = "avatar"    //this is now you link it to the CSS portion i think 
+            src = {user.imageUrl}
+            alt = {'Photo of ' + user.name}
+            style = {{
+                width: user.imageSize,
+                width: user.imageSize,
+            }}
+        />
+    </div>
+
+    ex)
+        creating the image object
+    
+        const pim = {
+            name: 'Pim Pimling',
+            imageUrl:
+                'https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da8481ee90e64e2c963fd20a6df7',
+            imageSize: 90,
+        };
+
+        calling the image object
+        
+        <h1>Pim Pimling</h1>
+          <img
+            className="avatar"
+            src={pim.imageUrl}
+            alt={'Photo of ' + pim.name}
+            style={{
+              width: pim.imageSize,
+              height: pim.imageSize,
+            }}
+          />
+
+    ex 2)
+        creating the charlie image object
+
+        const charlie = {
+            name: 'Charlie Dompler',
+            imageURL:
+                'https://static.wikia.nocookie.net/smiling-friends/images/5/54/A6b68dfc-c3d7-465b-b473-242b89f07eea-1712202288863.webp/revision/latest/scale-to-width-down/250?cb=20240623023916',
+            imageSize: 90,
+        }
+
+        calling the charlie image object
+
+        <h1>{charlie.name}</h1>
+        <img
+            className="avatar"
+            src = {charlie.imageURL}
+            alt = {'Picture of ' + charlie.name}
+            style = {{
+                width: charlie.imageSize,
+                height: charlie.imageSize,
+            }}
+        />
+        
