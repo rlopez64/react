@@ -1,0 +1,3 @@
+How to print out special characters (applies when typing text in a <button></button>):
+    {'special_character'}, ex) {'('} or {'<'} 
+    {''}
