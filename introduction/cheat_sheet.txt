@@ -93,7 +93,7 @@ adding custom styles:
         border-radius: 50%;
     }
 
-how to create a list object and call it later
+how to create a list object and call it later (USING CONDITIONAL STATEMENTS)
 
 adding a list component:
     const sm_characters = [
@@ -133,6 +133,30 @@ calling the components BUT using a conditional(if statement) to change attribute
 create a list object and call it later (NORMAL)
 
 adding a list component:
-    
-    
-    
+    const pikmins = [
+      { title: 'Purple Pikmin', id: 1 },
+      { title: 'Yellow Pikmion', id: 2 },
+      { title: 'Red Pikmin', id: 3 },
+      { title: 'Rock Pikmion', id: 4 },
+      { title: 'Winged Pikmin', id: 5 },
+      { title: 'White Pikmion', id: 6 },
+      { title: 'Blue Pikmion', id: 7 },
+    ];
+
+calling the components:
+    const pikminList = pikmins.map((pikmins) => (
+        <li
+          key={pikmins.id}
+          style={{
+            color: '#9FE2BF',
+          }}
+        >
+          {pikmins.title}
+        </li>
+      ));
+
+    return (
+        <div>
+        <ul>{pikminList}</ul>
+        </div>
+    );

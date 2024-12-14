@@ -33,6 +33,16 @@
       { title: 'Brittney', isAlive: false, id: 8 },
     ];
 
+    const pikmins = [
+      { title: 'Purple Pikmin', id: 1 },
+      { title: 'Yellow Pikmion', id: 2 },
+      { title: 'Red Pikmin', id: 3 },
+      { title: 'Rock Pikmion', id: 4 },
+      { title: 'Winged Pikmin', id: 5 },
+      { title: 'White Pikmion', id: 6 },
+      { title: 'Blue Pikmion', id: 7 },
+    ];
+
     let App = function ShoppingList() {
       const listItems = sm_characters.map((sm_characters) => {
         let color;
@@ -55,7 +65,24 @@
         );
       });
 
-      return <ul>{listItems}</ul>;
+      const pikminList = pikmins.map((pikmins) => (
+        <li
+          key={pikmins.id}
+          style={{
+            color: 'black',
+          }}
+        >
+          {pikmins.title}
+        </li>
+      ));
+
+      return (
+        <div>
+          <ul>{listItems}</ul>
+          <h1>Rank of how good each Pikmin looks</h1>
+          <ol>{pikminList}</ol>
+        </div>
+      );
     };
 
     const root = createRoot(document.getElementById('root'));
