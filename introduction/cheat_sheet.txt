@@ -84,3 +84,55 @@ How to add an img object with attributes:
             }}
         />
         
+adding custom styles:
+    you can use any custom name
+    <img className="avatar" />
+
+    call it later in a css file using
+    .avatar {
+        border-radius: 50%;
+    }
+
+how to create a list object and call it later
+
+adding a list component:
+    const sm_characters = [
+        {title: 'Glep', isAlive: true, id: 1},
+        {title: 'Charlie Dompler', isAlive: true, id: 2},
+        {title: 'Allan Red', isAlive: true, id: 3},
+        {title: 'Pim Pimling', isAlive: true, id: 4},
+        {title: 'Mr.Boss', isAlive: true, id: 5},
+        {title: 'Mip', isAlive: false, id: 6},
+    ];
+
+calling the components BUT using a conditional(if statement) to change attribute:
+    const listItems = sm_characters.map((sm_characters) => {
+        let color;
+
+        if (sm_characters.isAlive) {
+          color = 'forestgreen';
+        } else {
+          color = 'crimson';
+        }
+
+        return (
+          <li
+            key={sm_characters.id}
+            style={{
+              color: color,
+            }}
+          >
+            {sm_characters.title}
+          </li>
+        );
+      });
+
+      return <ul>{listItems}</ul>;
+
+
+create a list object and call it later (NORMAL)
+
+adding a list component:
+    
+    
+    
